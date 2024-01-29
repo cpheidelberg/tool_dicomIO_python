@@ -14,7 +14,8 @@ def loadPolyline(path:str, exam:str, label:str) -> np.ndarray:
 
     # create polyline path
     # path = os.path.join(path, f"{exam}_polyline_{label}.txt")
-    files = [os.path.join(path, f) for f in os.listdir(path) if f.startswith(f"{exam}_polyline_{label}_0")]
+    files = [os.path.join(path, f) for f in os.listdir(path) if f.startswith(f"{exam}_polyline_{label}")]
+
     polylines = {}
     for i, f in enumerate(files):
         polyline = []
